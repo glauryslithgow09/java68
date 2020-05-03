@@ -1,0 +1,68 @@
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contraseña</title>
+    <meta charset="UTF-8">
+</head>
+
+<body style="background-color: darkred;">
+    <h1>Contraseña</h1>
+    <input type="password" id="clave" maxlength="15" size="15">
+    <br>
+    <p>caracteres que faltan:<span id="cantidad">15</span></p>
+
+    <script>
+        addEventListener('DOMContentLoaded', inicio, false);
+
+        function inicio() {
+            document.getElementById('clave').addEventListener('keyup', presion, false);
+        }
+
+        function presion() {
+            var canti = document.getElementById('clave').value.length;
+            var disponibles = 15 - parseInt(canti);
+            document.getElementById('cantidad').innerHTML = disponibles;
+        }
+    </script>
+
+</body>
+
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Confirma los términos y condiciones?:
+    <input type="checkbox" id="checkbox1" name="checkbox1">
+
+    </br>
+
+    <input type="button" value="Enviar" id="Enviar" onClick="" style="display:none;">
+    <script>
+        addEventListener('DOMContentLoaded', inicio, false);
+
+        function inicio() {
+            document.getElementById('checkbox1').addEventListener('change', cambiocheckbox, false);
+        }
+
+        function cambiocheckbox() {
+            if (document.getElementById('checkbox1').checked) {
+                document.getElementById('Enviar').style.display = "block";
+            } else {
+                document.getElementById('Enviar').style.display = "none";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
